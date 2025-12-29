@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+</head>
+
+<body>
+    <%- include('./partials/nav') %>
+        <h1>Full Menu</h1>
+
+        <h2>Mains</h2>
+
+        <% menu.forEach(item=> { %>
+            <% if (item.category=='mains' ) { %>
+                <p> <b><i>
+                            <%= item.name%>
+                                <%=item.rating==5 ? '⭐' : '' %>
+                        </i></b> </p>
+                <p> <u>Price:</u> $<%=item.price%>
+                </p>
+                <p> <u>Rating:</u>
+                    <%=item.rating%>
+                </p>
+                <p> <u>Details:</u>
+                    <%=item.details%>
+                </p>
+                <br>
+                <% } %>
+                    <% }) %>
+
+                        <h2>Desserts</h2>
+
+                        <% menu.forEach(item=> { %>
+                            <% if (item.category=='desserts' ) { %>
+                                <p> <b><i>
+                                            <%= item.name%>
+                                                <%=item.rating==5 ? '⭐' : '' %>
+                                        </i></b> </p>
+                                <p> <u>Price:</u> $<%=item.price%>
+                                </p>
+                                <p> <u>Rating:</u>
+                                    <%=item.rating%>
+                                </p>
+                                <p> <u>Details:</u>
+                                    <%=item.details%>
+                                </p>
+                                <br>
+                                <% } %>
+                                    <% }) %>
+
+                                        <h2>Sides</h2>
+
+                                        <% menu.forEach(item=> { %>
+                                            <% if (item.category=='sides' ) { %>
+                                                <p> <b><i>
+                                                            <%= item.name%>
+                                                                <%=item.rating==5 ? '⭐' : '' %>
+                                                        </i></b> </p>
+                                                <p> <u>Price:</u> $<%=item.price%>
+                                                </p>
+                                                <p> <u>Rating:</u>
+                                                    <%=item.rating%>
+                                                </p>
+                                                <p> <u>Details:</u>
+                                                    <%=item.details%>
+                                                </p>
+                                                <br>
+                                                <% } %>
+                                                    <% }) %>
+
+
+
+
+</body>
+
+</html>
