@@ -66,8 +66,7 @@ app.get("/menu/:category", (req, res) => {
   const category = req.params.category;
 
   const menuItems = RESTAURANT.menu.filter(
-    (item) => item.category == category.toLowerCase()
-  );
+    item => item.category == category.toLowerCase());
 
   if (menuItems.length === 0)
     return res.status(404).send("Error 404: Category not found.");
