@@ -1,35 +1,28 @@
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= category %></title>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        <%= category %>
-    </title>
-</head>
-
-<body>
+  <body>
     <%- include('./partials/nav') %>
-        <h1>
-            <%= category %>
-        </h1>
+    <h1><%= category %></h1>
 
-        <% menuItems.forEach(item=> { %>
-            <p> <b><i>
-                        <%= item.name%>
-                            <%=item.rating==5 ? '⭐' : '' %>
-                    </i></b> </p>
-            <p> <u>Price:</u> $<%=item.price%>
-            </p>
-            <p> <u>Rating:</u>
-                <%=item.rating%>
-            </p>
-            <p> <u>Details:</u>
-                <%=item.details%>
-            </p>
-            <br>
-            <% }); %>
-
-</body>
-
+    <% menuItems.forEach(item=> { %>
+    <p>
+      <b><i> <%= item.name%> <%=item.rating==5 ? '⭐' : '' %> </i></b>
+    </p>
+    <p><u>Price:</u> $<%=item.price%></p>
+    <p>
+      <u>Rating:</u>
+      <%=item.rating%>
+    </p>
+    <p>
+      <u>Details:</u>
+      <%=item.details%>
+    </p>
+    <br />
+    <% }); %>
+  </body>
 </html>
